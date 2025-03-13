@@ -1,2 +1,2 @@
 # .github
-Templates for issues for MIS-BGHMC
+## Templates for issues to be used in MIS-BGHMC 
