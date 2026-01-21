@@ -15,7 +15,7 @@ body:
 
   # --- Request Details ---
   - type: input
-    id: mis_request_form_#
+    id: mis_request_form_number
     attributes:
       label: MIS Form Request #
       placeholder: The number written on the Request Form (discuss, pwedeng baliktad, encode muna then write #)
