@@ -1,0 +1,197 @@
+name: MIS Service Request
+description: Submit an Information Service / MIS request based on the official Service Request Form
+title: "[MIS] "
+labels:
+  - MIS
+  - service-request
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🖥️ MIS Service Request Form
+        Please complete all applicable fields. This request will be used for tracking, action, and audit purposes.
+
+  # --- Request Details ---
+  - type: input
+    id: request_date
+    attributes:
+      label: Date
+      description: Date of request
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+
+  - type: input
+    id: request_time
+    attributes:
+      label: Time
+      description: Time of request
+      placeholder: HH:MM
+    validations:
+      required: true
+
+  - type: input
+    id: office_name
+    attributes:
+      label: Name of Office / Department
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+    validations:
+      required: true
+
+  # --- Request Category ---
+  - type: checkboxes
+    id: request_category
+    attributes:
+      label: Request Category
+      description: Check all that apply
+      options:
+        - label: Laptop
+        - label: HOMIS Program
+        - label: User Account Management
+        - label: Installation of Telephone (Intercom)
+        - label: Ink
+        - label: Service Unit (Computer Unit / Printer / Accessories)
+        - label: LCD Projector
+        - label: Installation of Network
+        - label: Hardware Technical Assistance
+        - label: Software Technical Assistance
+        - label: HOMIS Orientation / Training / Lecture
+        - label: Others (please specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: other_category
+    attributes:
+      label: Others – Please Specify
+      placeholder: Specify if "Others" was selected
+
+  # --- Nature of the Problem ---
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: Nature of the Problem / Service Requested
+      description: Describe the issue or service request in detail
+      placeholder: Include error messages, symptoms, steps taken, or expected outcome
+    validations:
+      required: true
+
+  # --- Asset Information ---
+  - type: markdown
+    attributes:
+      value: |
+        ### 🏷️ Asset Information (if applicable)
+
+  - type: input
+    id: property_number
+    attributes:
+      label: Property Number
+      placeholder: Optional
+
+  - type: input
+    id: serial_number
+    attributes:
+      label: Serial Number
+      placeholder: Optional
+
+  - type: input
+    id: item_tag
+    attributes:
+      label: Item Tag
+      placeholder: Optional
+
+  # --- Requesting Personnel ---
+  - type: markdown
+    attributes:
+      value: |
+        ### 👤 Requested By
+
+  - type: input
+    id: requester_name
+    attributes:
+      label: Name of Requesting Personnel
+    validations:
+      required: true
+
+  - type: input
+    id: requester_position
+    attributes:
+      label: Position
+    validations:
+      required: true
+
+  # --- MIS Use ---
+  - type: markdown
+    attributes:
+      value: |
+        ### 🛠️ MIS Action (To be filled by MIS)
+
+  - type: input
+    id: action_officer
+    attributes:
+      label: Action Officer
+      placeholder: MIS personnel assigned
+
+  - type: textarea
+    id: actions_taken
+    attributes:
+      label: Actions Taken
+      description: Include actions performed, dates, and time
+      placeholder: |
+        - Date/Time:
+        - Action performed:
+        - Result:
+
+  # --- Supervisor ---
+  - type: markdown
+    attributes:
+      value: |
+        ### 🧾 Supervisor Notation
+
+  - type: input
+    id: supervisor_name
+    attributes:
+      label: Noted By (Supervisor)
+
+  - type: textarea
+    id: supervisor_remarks
+    attributes:
+      label: Supervisor Remarks
+
+  # --- Resolution ---
+  - type: checkboxes
+    id: resolution_status
+    attributes:
+      label: Resolution / Completion Checklist
+      options:
+        - label: Issue investigated
+        - label: Repair performed
+        - label: Replacement provided
+        - label: Configuration / setup completed
+        - label: User orientation / training conducted
+        - label: Other (specify in remarks)
+
+  # --- Acknowledgement ---
+  - type: markdown
+    attributes:
+      value: |
+        ### ✅ Acknowledgement
+
+  - type: input
+    id: acknowledged_by
+    attributes:
+      label: Acknowledged By
+
+  - type: input
+    id: acknowledged_datetime
+    attributes:
+      label: Date & Time Acknowledged
+      placeholder: YYYY-MM-DD HH:MM
