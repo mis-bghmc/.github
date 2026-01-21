@@ -8,11 +8,13 @@ body:
     attributes:
       label: Target System/Module
       options:
-        - Patient Registration
         - Billing
-        - Pharmacy Inventory
-        - Laboratory
-        - Radiology
+        - CCDS
+        - Medilogs
+        - EMR
+        - DIETS
+        - System X
+        - SYstem Y
         - Others
       description: Where should this feature be implemented?
     validations:
