@@ -65,9 +65,9 @@ body:
     attributes:
       label: Request Category
       options:
-        - label: New System Development
-        - label: System Modification / Enhancement
-        - label: Bug Fixes
+        - New System Development
+        - System Modification / Enhancement
+        - Bug Fixes
     validations:
       required: true
 
