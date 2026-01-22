@@ -66,7 +66,7 @@ body:
       label: Request Category
       options:
         - New System Development
-        - System Modification / Enhancement
+        - Feature
         - Bug Fixes
     validations:
       required: true
