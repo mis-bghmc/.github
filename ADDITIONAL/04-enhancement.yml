@@ -1,0 +1,66 @@
+name: "🔧 Enhancement"
+description: "Detail an improvement to an existing feature that will be implemented."
+title: "🔧 [Enhancement] "
+body:
+  - type: textarea
+    id: enhancement-summary
+    attributes:
+      label: "📌 Enhancement Summary"
+      description: "Clearly describe the feature/component being enhanced and the reason behind it."
+      placeholder: "We're enhancing the report filtering to support date ranges..."
+    validations:
+      required: true
+
+  - type: input
+    id: affected-area
+    attributes:
+      label: "🗂 Affected Area"
+      description: "Which module, feature, or component will be enhanced?"
+      placeholder: "e.g., Reports > Monthly Summary Table"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: "📉 Current Behavior"
+      description: "Explain the existing behavior or limitation of the component before enhancement."
+      placeholder: "The report table currently only filters by category..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: enhancement-details
+    attributes:
+      label: "🛠 Implementation Plan"
+      description: "Describe what exactly will be changed or improved and how it will be implemented."
+      placeholder: |
+        - Add date range filters
+        - Modify backend query to support date range
+        - Update frontend to include calendar picker
+        - Adjust tests accordingly
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "✅ Acceptance Criteria"
+      description: "List clear conditions that must be met for the enhancement to be considered complete."
+      placeholder: |
+        - User can select a start and end date
+        - Report filters correctly by selected date range
+        - No errors in browser console or logs
+        - Unit and integration tests pass
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "📝 Additional Notes or Dependencies"
+      description: "Mention any design references, dependencies, blockers, or related issues."
+      placeholder: |
+        - Design mockup: Figma link
+        - Related to issue #42
+        - Depends on #88 being merged first

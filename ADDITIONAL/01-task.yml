@@ -1,0 +1,32 @@
+name: "📌 Task"
+description: "Create a new task with a task items checklist"
+title: "📌 [Task] "
+body:
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📌 Task Overview"
+      description: "Provide a brief description of the task."
+      placeholder: "What needs to be done?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: todo
+    attributes:
+      label: "📃 Task Checklist"
+      description: "List the things needed to complete this task."
+      placeholder: |
+        - [ ] Task Item 1
+        - [ ] Task Item 2
+        - [ ] Task Item 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: "📜 Additional Notes"
+      description: "Any other relevant information?"
+      placeholder: "List any challenges, required dependencies, or additional factors to consider."

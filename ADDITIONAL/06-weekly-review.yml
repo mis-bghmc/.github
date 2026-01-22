@@ -1,0 +1,95 @@
+name: "📝 Weekly Review"
+description: "Report weekly findings, including bugs, enhancements, and other issues."
+title: "📝 [Weekly Review] Week __ of 2026 (from - to)"
+body:
+
+  - type: input
+    id: week
+    attributes:
+      label: "📝 Weekly Review Report"
+      description: "Enter the date range for this review (e.g., Week 1 of 2026 (December 29 - January 04))."
+      placeholder: "Week __ of 2026 (from - to)"
+    validations:
+      required: true
+      
+  - type: input
+    id: reviewer
+    attributes:
+      label: "Reviewer"
+      description: "Enter your GitHub username or name."
+      placeholder: "@your-username"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### 📝 **Review Summary**"
+
+  - type: textarea
+    id: review_summary
+    attributes:
+      label: "📝 Review Summary"
+      description: "Insight of findings regarding this weekly review"
+      placeholder: "An overview of this week’s findings, detailing critical bugs found, completed feature enhancements, and system issues impacting performance."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### 🐞 **Bugs Found**"
+
+  - type: textarea
+    id: bugs
+    attributes:
+      label: " 🐛List of Bugs"
+      description: "Document bugs found, their severity, and current status."
+      placeholder: |
+        - [ ] Bug 1
+        - [ ] Bug 2
+        - [ ] Bug 3
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "### 📌 **Tasks Identified**"
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: "📃 List of Tasks"
+      description: "Identified tasks needed to accomplish."
+      placeholder: |
+        - [ ] Task 1
+        - [ ] Task 2
+        - [ ] Task 3
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "### 🔧 **Enhancements / Improvements**"
+
+  - type: textarea
+    id: enhancements
+    attributes:
+      label: "🪚 Modifications and Enhancements"
+      description: "List features or improvements needed, along with their priority and status."
+      placeholder: |
+        - [ ] Enhancement 1
+        - [ ] Enhancement 2
+        - [ ] Enhancement 3
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "### 🔍 **Other Observations & Notes**"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "📜 Additional Observations"
+      description: "Include any other findings, insights, or general notes."
+    validations:
+      required: false
