@@ -60,7 +60,7 @@ body:
       required: true
 
   # --- Request Category ---
-  - type: checkboxes
+  - type: dropdown
     id: request_category
     attributes:
       label: Request Category
