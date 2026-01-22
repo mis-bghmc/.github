@@ -1,7 +1,7 @@
 name: 🛠 General Update / Task
 description: Any system task or update that doesn't fall under bugs or new features
 title: "[TASK] [System Name] - Short Description"
-labels: [task]
+labels: internal-only
 body:
   - type: dropdown
     id: system
