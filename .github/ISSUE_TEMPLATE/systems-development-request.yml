@@ -64,7 +64,6 @@ body:
     id: request_category
     attributes:
       label: Request Category
-      description: Choose and check your service request
       options:
         - label: New System Development
         - label: System Modification / Enhancement
