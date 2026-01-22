@@ -1,7 +1,7 @@
 name: 🚀 Feature Request
 description: Suggest a new feature or capability
 title: "[FEATURE] [System Name] - Short Description"
-labels: [enhancement, feature]
+labels: internal-only
 body:
   - type: dropdown
     id: system
