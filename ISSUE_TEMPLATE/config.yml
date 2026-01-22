@@ -1,6 +1,9 @@
-# .github/ISSUE_TEMPLATE/config.yml
 blank_issues_enabled: false
 contact_links:
-  - name: 📬 Request System Access
-    url: https://your.helpdesk.link
-    about: Request access or login credentials for hospital systems.
+  - name: MIS Service Request
+    url: https://github.com/mis-bghmc/.github/issues/new?template=mis-service-request.yml
+    about: Official MIS Service Request Form
+
+  - name: Systems Development Request
+    url: https://github.com/mis-bghmc/.github/issues/new?template=systems-development-request.yml
+    about: New system, enhancement, or bug fix requests
