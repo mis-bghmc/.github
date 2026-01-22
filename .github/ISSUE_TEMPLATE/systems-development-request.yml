@@ -1,0 +1,142 @@
+name: Systems Development Request
+description: Request for new system development, system modification/enhancement, or bug fixes
+title: "[SYSDEV] "
+labels:
+  - systems-development
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🏥 Integrated Hospital Operations and Management  
+        ### Systems Development Request Form  
+        Please complete all required fields. This request will undergo review, prioritization, and approval.
+
+  # --- Request Information ---
+  - type: input
+    id: mis_request_form_number
+    attributes:
+      label: MIS Form Request #
+      placeholder: The number written on the Request Form (discuss, pwedeng baliktad, encode muna then write #)
+  - type: input
+    id: request_date
+    attributes:
+      label: Date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+
+  - type: input
+    id: contact_number
+    attributes:
+      label: Contact Number
+      description: Contact number of requesting office/person
+    validations:
+      required: true
+
+  - type: input
+    id: requesting_office
+    attributes:
+      label: Name of Requesting Office
+    validations:
+      required: true
+
+  - type: input
+    id: requester_name
+    attributes:
+      label: Requested By
+      description: Name of requesting personnel
+    validations:
+      required: true
+
+  # --- System Details ---
+  - type: input
+    id: system_name
+    attributes:
+      label: System Name
+      description: Name of the system affected or to be developed
+    validations:
+      required: true
+
+  # --- Request Category ---
+  - type: checkboxes
+    id: request_category
+    attributes:
+      label: Request Category
+      description: Choose and check your service request
+      options:
+        - label: New System Development
+        - label: System Modification / Enhancement
+        - label: Bug Fixes
+    validations:
+      required: true
+
+  # --- Priority ---
+  - type: dropdown
+    id: priority_level
+    attributes:
+      label: Priority Level
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  # --- Reason for Request ---
+  - type: textarea
+    id: reason_for_request
+    attributes:
+      label: Reason for Request
+      description: Clearly explain the reason, background, and justification
+      placeholder: |
+        - Current issue or limitation:
+        - Business / clinical impact:
+        - Expected benefit:
+    validations:
+      required: true
+
+  # --- Date Received (MIS Use) ---
+  - type: input
+    id: date_received
+    attributes:
+      label: Date Received (MIS Use)
+      placeholder: YYYY-MM-DD
+
+  # --- Acknowledgement ---
+  - type: markdown
+    attributes:
+      value: |
+        ### ✅ Acknowledgement (MIS / QA / ISO)
+
+  - type: input
+    id: acknowledged_homis
+    attributes:
+      label: Acknowledged By (HOMIS)
+      placeholder: Name, Signature, and Date
+
+  - type: input
+    id: acknowledged_qao_iso
+    attributes:
+      label: Acknowledged By (QAO / ISO)
+      placeholder: Name, Signature, and Date
+
+  # --- Attachments ---
+  - type: markdown
+    attributes:
+      value: |
+        ### 📎 Attachments (if applicable)
+        Please attach screenshots, mockups, process flows, or reference documents after submitting.
+
+  # --- Acceptance Checklist ---
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Submission Checklist
+      options:
+        - label: System name clearly identified
+        - label: Request category selected
+        - label: Priority level defined
+        - label: Reason for request fully explained
+        - label: Contact information provided
