@@ -1,0 +1,65 @@
+name: "🐛 Bug Report"
+description: "Report a bug to help us improve."
+title: "🐛 [Bug] "
+body:
+
+  - type: markdown
+    attributes:
+      value: "## Before Submitting\n- Make sure you are using the latest version.\n- Check if the issue has already been reported.\n- Provide as much detail as possible."
+
+  - type: input
+    id: bug_summary
+    attributes:
+      label: "🐛 Bug Summary"
+      description: "A concise description of the bug."
+      placeholder: "Something is broken when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: "🐾 Steps to Reproduce"
+      description: "Step-by-step instructions to reproduce the issue."
+      placeholder:  |
+        1. Run the command '...'.
+        2. Call the function '...'.
+        3. Observe the error message.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "😳 Expected Behavior"
+      description: "What should have happened instead?"
+      placeholder: "It should have..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: "'🤔 Actual Behavior"
+      description: "What actually happened? Include any error messages."
+      placeholder: "It actually..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs_and_screenshots
+    attributes:
+      label: "📸 Logs & Screenshots"
+      description: "Paste relevant logs, stack traces, or screenshots."
+      placeholder: "Error log: ..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: "📜 Additional Information"
+      description: "Any other context, ideas, or solutions?"
+      placeholder: "Possibly related to..."
+    validations:
+      required: false

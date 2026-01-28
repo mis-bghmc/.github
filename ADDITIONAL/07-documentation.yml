@@ -1,0 +1,35 @@
+name: 📖 Documentation
+description: Use this template for documentation tasks and content updates.
+title: "📖 [Documentation] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the documentation! Please fill out the details below.
+        
+  - type: input
+    id: doc-part
+    attributes:
+      label: 📖 What part of the documentation?
+      description: e.g. README, API guide, user manual, etc.
+      placeholder: "User Guide > Adding a record."
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📖 Summary of the Update
+      description: What needs to be added, fixed, or improved?
+      placeholder: "Add step-by-step instructions for adding a record."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📜 Additional Context
+      description: Include links, screenshots, or references if helpful.
+      placeholder: "See issue #123."
+    validations:
+      required: false

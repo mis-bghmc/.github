@@ -1,0 +1,39 @@
+name: '🪚 Modification'
+description: 'Changes in existing feature or function.'
+title: '🪚 [Modification] '
+body:
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: '🪚 Modification Overview'
+      description: 'Prove a brief description of the modification.'
+      placeholder: 'What needs to be modified?'
+    validations:
+      required: true
+  
+  - type: textarea
+    attributes:
+      label: '🤔 Reason for Modification'
+      description: 'Why is this modification necessary?'
+      placeholder: 'Explain why the modification is needed. Is it to fix a bug, improve performance, or address an existing issue?'
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: '📃 Modification Checklist'
+      description: 'List the things needed to complete this modification.'
+      placeholder: |
+        - [ ] Modification Item 1
+        - [ ] Modification Item 2
+        - [ ] Modification Item 3
+    validations:
+      required: false
+
+  - type: 'input'
+    attributes:
+      label: ' 📜 Related Issues'
+      description: 'Link to any related issues or pull requests.'
+      placeholder: 'Optional: #issue_number'

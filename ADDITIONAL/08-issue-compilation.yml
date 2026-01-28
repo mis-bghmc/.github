@@ -1,0 +1,31 @@
+name: 📚 Issue Compilation
+description: Use this template for creating issues with multiple contents or simply a compilation.
+title: "📚 [Issue Compilation] "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "📚 Issue Compilation Overview"
+      description: "Provide a brief description of the task."
+      placeholder: "What is the compilation all about?"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: todo
+    attributes:
+      label: "📃 Issue List"
+      description: "List the things needed to complete this task."
+      placeholder: |
+        - [ ] Task Item 1
+        - [ ] Task Item 2
+        - [ ] Task Item 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: "📜 Additional Notes"
+      description: "Any other relevant information?"
+      placeholder: "List any challenges, required dependencies, or additional factors to consider."
