@@ -1,0 +1,40 @@
+name: "[2] 🚀 Feature Request"
+description: Propose a new feature or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Use Case
+      description: What problem does this feature solve?
+      placeholder: "Explain the problem or need that this feature addresses."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you’d like
+      placeholder: "Describe your proposed feature or how you would like it to work."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Users, performance, security, etc.
+      placeholder: "Explain who benefits from this feature and why it’s important."
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Estimated Size
+      description: How big or complex is this feature?
+      options:
+        - Small
+        - Medium
+        - Large
+        - Epic
