@@ -28,6 +28,19 @@ body:
       description: Users, performance, security, etc.
       placeholder: "Explain who benefits from this feature and why it’s important."
 
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define the conditions that must be met for this feature to be considered complete.
+      placeholder: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+
   - type: dropdown
     id: size
     attributes:
