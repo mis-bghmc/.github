@@ -1,0 +1,93 @@
+name: "[3] 🧰 Tech / Maintenance"
+description: Non-feature, non-bug technical work (refactor, cleanup, reliability, config, ops)
+title: "[Tech]: "
+labels: ["tech", "maintenance"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Scope Reminder
+        Use this issue **only** for:
+        - Technical improvements
+        - Refactoring
+        - Cleanup / chores
+        - Reliability, logging, observability
+        - Configuration or tooling changes
+
+        ❌ Do NOT use this for:
+        - New features
+        - User-facing bug fixes
+        - Business logic changes
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / Motivation
+      description: Why is this technical work needed?
+      placeholder: |
+        Explain the technical reason:
+        - operational issue
+        - reliability concern
+        - technical debt
+        - environment constraint
+        - maintainability problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: Planned Changes
+      description: List the technical changes to be made
+      placeholder: |
+        - Increase timeout for external API calls
+        - Add logging for request/response tracing
+        - Remove unused imports
+        - Refactor module for clarity
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What improves as a result of this work?
+      placeholder: |
+        - Reliability
+        - Performance
+        - Debuggability
+        - Developer experience
+        - Operational stability
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks / Notes
+      description: Any risks, limitations, or follow-ups?
+      placeholder: |
+        - Possible side effects
+        - Backward compatibility notes
+        - Future cleanup needed
+
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Conditions that must be met for this tech work to be considered complete
+      placeholder: |
+        - [ ] No user-facing behavior changes introduced
+        - [ ] Changes are limited to tech / maintenance scope
+        - [ ] Code is readable and documented where necessary
+        - [ ] Config changes reflected in `.env.example` if applicable
+    validations:
+      required: true
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Estimated Size
+      description: How big or risky is this technical change?
+      options:
+        - Small (safe, isolated)
+        - Medium (multiple files / modules)
+        - Large (cross-cutting / needs extra review)
