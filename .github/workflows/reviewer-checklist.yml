@@ -7,27 +7,28 @@ on:
 jobs:
   post-checklist:
     runs-on: ubuntu-latest
-    # Only run if a reviewer was assigned
     if: github.event.pull_request.requested_reviewers != ''
     steps:
       - name: Post Reviewer Checklist
         uses: mshick/add-pr-comment@v2
         with:
           message: |
-            ## 🕵️ Reviewer Audit Report
-            *Assigned Reviewer: @${{ github.event.pull_request.requested_reviewers[0].login }}*
+            ## 🤝 Collaborative Review Checklist
+            *Hello @${{ github.event.pull_request.requested_reviewers[0].login }}! As the assigned reviewer, please use this guide to ensure we maintain high standards for our dashboard and services.*
 
-            ### 🚩 Critical Quality Gates
-            - [ ] **Functional Parity:** Does it satisfy the Jira ticket requirements?
-            - [ ] **Logic & Edge Cases:** Verified handling for `null`, `undefined`, and error states.
-            - [ ] **No Regressions:** Confirmed this doesn't break Analytics/Tabs.
-            - [ ] **Test Integrity:** New tests are meaningful and CI checks pass.
+            ### 🎯 Intent & Impact
+            - [ ] **Alignment:** Does the implementation solve the core problem described in the Jira ticket?
+            - [ ] **User Experience:** Are the UI changes (SLA badges/TAT charts) intuitive? Is the tab-state persistence smooth?
+            - [ ] **Risk Assessment:** Have we considered how this change might affect the broader monitoring ecosystem?
 
-            ### 🔍 Technical Deep-Dive
-            - [ ] Logic is DRY and modular.
-            - [ ] Layout is responsive (mobile/desktop).
-            - [ ] No memory leaks (Highcharts destroyed on unmount).
-            - [ ] Sensitive data is sanitized; no PII logged.
+            ### 🛠️ Technical Excellence
+            - [ ] **Resilience:** Are error states (API failures, empty chart data) handled gracefully with user-friendly feedback?
+            - [ ] **Sustainability:** Is the code easy to read and maintain? Are Highcharts instances properly disposed of to prevent memory leaks?
+            - [ ] **Efficiency:** Are we using optimal logic for the 8-hour SLA calculation? (Avoid unnecessary re-renders).
+
+            ### 🧪 Verification & Security
+            - [ ] **Test Quality:** Do the tests cover real-world scenarios, including "unhappy paths" and boundary conditions?
+            - [ ] **Data Integrity:** Is all processed data sanitized? Ensure no sensitive values are leaked in logs or hidden inputs.
 
             ---
-            *Please complete this checklist before approving the PR.*
+            > **Reviewer Tip:** If you find issues, try to provide a suggestion (`suggestion` block) or a brief "why" to help the author grow! 🚀
