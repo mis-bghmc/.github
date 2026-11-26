@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub PR Preview and Submit"
+  short_description: "Preview issue-based PRs and publish after approval"
+  default_prompt: "Use $gh-pr-preview-submit to prepare or update my PR from its branch diff and linked issues, then show the complete preview before asking to publish."
