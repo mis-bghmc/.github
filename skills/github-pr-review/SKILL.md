@@ -56,26 +56,56 @@ If the connected user authored the PR and GitHub disallows self-approval, do not
 
 ## Formal review body
 
-Use a professional, friendly, concise tone; focus on clear, actionable engineering feedback. Adapt sections to actual evidence:
+Use this **default friendly, formal GitHub review format** for initial reviews and re-reviews. Include only sections applicable to the PR; use concise bullets and clear, human explanations. The verdict must be immediately apparent to the author. State actual evidence rather than generic claims. Do not claim CI or tests passed unless verified.
 
 ```markdown
-## PR Review – [PASS | PASS_WITH_NOTES | FAIL]
+## PR Review — [PASS | PASS_WITH_NOTES | FAIL]
 
-**Scope:** [What this PR intends to change]
-**Acceptance criteria:** [Met / partially met / unmet, with specifics]
-**Verification:** [Files/diff, relevant tests and CI status, compatibility/security checks]
+**Scope**
+[One or two sentences describing the intended change.]
+
+**Acceptance Criteria**
+- ✅ [Verified criterion and evidence]
+- ⚠️ [Partially verified criterion and remaining limitation, if applicable]
+- ❌ [Unmet criterion, if applicable]
+
+**Verification**
+- Diff: [Files and relevant behavior actually inspected]
+- Tests: [Commands and observed results, author-reported results, or not run]
+- CI: [Observed status, or unavailable/pending]
+- Compatibility / security: [Checks performed and any material limitations]
 
 ### Findings
-- [P1/P2/P3] [In-scope issue, precise location, failure scenario and suggested fix; or "No blocking in-scope findings."]
+- [P0/P1/P2/P3] **In scope** — [Exact location; failure scenario; impact; minimal correction]
+- Or: No blocking in-scope findings.
 
-### Non-blocking notes
-- [Out-of-scope suggestions or minor notes, clearly labeled; omit if none]
+### Non-blocking Notes
+- [P3 / optional] **Out of scope — future enhancement:** [Suggestion and reason it is unrelated to this PR]
+- Omit this section when there are no useful notes.
 
-### Verdict
-**[PASS | PASS_WITH_NOTES | FAIL]** — [brief, evidence-backed rationale]
+### Final Verdict
+**[PASS — APPROVE | PASS_WITH_NOTES — APPROVE | FAIL — REQUEST_CHANGES]**
+
+[Brief evidence-based decision, with a polite, natural closing where appropriate.]
 ```
 
-Do not insert generic claims unsupported by inspection. For re-reviews add a short **Previous findings** section with resolution status. File comments should point to changed lines where supported.
+For **re-reviews**, insert this additional section before Findings and explicitly track earlier actionable feedback:
+
+```markdown
+### Previous Findings
+| Previous finding | Re-review result | Evidence |
+| --- | --- | --- |
+| [Finding and severity] | Resolved / Still open / Obsolete / Out of scope | [Changed code, test, or author response verified] |
+```
+
+Do not mark a finding "Resolved" based solely on an author assertion; verify the implementation when accessible. Keep unresolved in-scope defects under Findings. Do not repeatedly raise out-of-scope suggestions as approval blockers. Use file-level inline comments on precise changed lines where supported.
+
+Formatting guidelines:
+- Start with the verdict and finish with the formal action; keep language clear, respectful, and constructive.
+- Show checkmarks only for verified criteria. If actual testing/CI is not available, explicitly say so.
+- Explain a failure with a reproducible scenario and suggested fix, without personal criticism.
+- Avoid ceremonial praise, excessive emojis, and generic boilerplate. A brief "Thanks for the update" is appropriate when natural.
+- The review body is valid Markdown for GitHub; do not rely on ChatGPT-specific badges or interactive controls.
 
 ## Review and re-review submission
 
